@@ -111,11 +111,25 @@ namespace Video_Management_Studio
         {
         }
 
+        void Form1_DragDrop(object sender, DragEventArgs e)
+        {
+            object data = e.Data.GetData(DataFormats.FileDrop);
+            Application.Exit();
+        }
+
+        void Form1_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+        }
+
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
-        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        private void MainForm_KeyPress(object sender, KeyPressEventArgs e)
         {
            
             if (e.KeyChar == 27)

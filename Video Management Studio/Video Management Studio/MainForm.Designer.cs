@@ -127,6 +127,9 @@
             this.Drop1.Size = new System.Drawing.Size(150, 150);
             this.Drop1.TabIndex = 4;
             this.Drop1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.Drop1.AllowDrop = true;
+            this.Drop1.DragDrop += new System.Windows.Forms.DragEventHandler(Form1_DragDrop);
+            this.Drop1.DragEnter += new System.Windows.Forms.DragEventHandler(Form1_DragEnter);
             // 
             // Label1
             // 
@@ -223,7 +226,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyPreview = true;
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(Form1_KeyPress);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(MainForm_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
