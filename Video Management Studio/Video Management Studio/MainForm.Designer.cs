@@ -216,13 +216,19 @@
             this.Controls.Add(this.HelpButton);
             this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.ActivateButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "MainForm";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.RightToLeftLayout = true;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyPreview = true;
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(Form1_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+      
 
         #endregion
 
@@ -242,5 +248,7 @@
         private System.Windows.Forms.Label Label5;
         private System.Windows.Forms.Label Label6;
     }
+
+
 }
 

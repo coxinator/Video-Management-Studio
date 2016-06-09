@@ -12,9 +12,11 @@ namespace Video_Management_Studio
 {
     public partial class MainForm : Form
     {
+        private bool fullscreen = false;
         public MainForm()
         {
             InitializeComponent();
+            MaximizeBox = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -32,6 +34,7 @@ namespace Video_Management_Studio
 
         private Rectangle setFullScreen()
         {
+            fullscreen = true;
             int minx, miny, maxx, maxy;
             minx = miny = int.MaxValue;
             maxx = maxy = int.MinValue;
@@ -50,6 +53,14 @@ namespace Video_Management_Studio
             fs.Activate();
             return new Rectangle(0, 0, maxx, maxy);
         }
+
+        private Rectangle unSetFullScreen()
+        {
+            fullscreen = false;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            return new Rectangle(0, 0, 875, 575);
+        }
+
 
         private void hideFormAndCursor()
         {
@@ -71,6 +82,26 @@ namespace Video_Management_Studio
             Cursor.Hide();
         }
 
+        private void showFormAndCursor()
+        {
+            this.ActivateButton.Show();
+            this.SettingsButton.Show();
+            this.HelpButton.Show();
+            this.Drop1.Show();
+            this.Drop2.Show();
+            this.Drop3.Show();
+            this.Drop4.Show();
+            this.Drop5.Show();
+            this.Drop6.Show();
+            this.Label1.Show();
+            this.Label2.Show();
+            this.Label3.Show();
+            this.Label4.Show();
+            this.Label5.Show();
+            this.Label6.Show();
+            Cursor.Show();
+        }
+
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -84,5 +115,18 @@ namespace Video_Management_Studio
         {
 
         }
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+            if (e.KeyChar == 27)
+            {
+                if (fullscreen)
+                {
+                    this.DesktopBounds = this.unSetFullScreen();
+                    this.showFormAndCursor();
+                }
+            }
+        }
+
     }
 }
