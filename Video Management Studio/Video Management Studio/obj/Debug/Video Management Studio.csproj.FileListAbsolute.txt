@@ -1,1 +1,8 @@
 C:\Users\Jesse\Documents\GitHub\Video-Management-Studio\Video Management Studio\Video Management Studio\bin\Debug\Video Management Studio.exe.config
+C:\Users\Jesse\Documents\GitHub\Video-Management-Studio\Video Management Studio\Video Management Studio\bin\Debug\Video Management Studio.exe
+C:\Users\Jesse\Documents\GitHub\Video-Management-Studio\Video Management Studio\Video Management Studio\bin\Debug\Video Management Studio.pdb
+C:\Users\Jesse\Documents\GitHub\Video-Management-Studio\Video Management Studio\Video Management Studio\obj\Debug\Video Management Studio.csprojResolveAssemblyReference.cache
+C:\Users\Jesse\Documents\GitHub\Video-Management-Studio\Video Management Studio\Video Management Studio\obj\Debug\Video_Management_Studio.Properties.Resources.resources
+C:\Users\Jesse\Documents\GitHub\Video-Management-Studio\Video Management Studio\Video Management Studio\obj\Debug\Video Management Studio.csproj.GenerateResource.Cache
+C:\Users\Jesse\Documents\GitHub\Video-Management-Studio\Video Management Studio\Video Management Studio\obj\Debug\Video Management Studio.exe
+C:\Users\Jesse\Documents\GitHub\Video-Management-Studio\Video Management Studio\Video Management Studio\obj\Debug\Video Management Studio.pdb
